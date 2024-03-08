@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3a41d9ce.css",
+    "main.js": "/static/js/main.f9eb9324.js",
+    "static/js/787.d5fa4d18.chunk.js": "/static/js/787.d5fa4d18.chunk.js",
+    "static/media/bg-fix.jpg": "/static/media/bg-fix.10baddeef0c063f1d1c4.jpg",
+    "static/media/logo-pacmail.jpg": "/static/media/logo-pacmail.467b64c1a6da7ba852a5.jpg",
+    "index.html": "/index.html",
+    "main.3a41d9ce.css.map": "/static/css/main.3a41d9ce.css.map",
+    "main.f9eb9324.js.map": "/static/js/main.f9eb9324.js.map",
+    "787.d5fa4d18.chunk.js.map": "/static/js/787.d5fa4d18.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3a41d9ce.css",
+    "static/js/main.f9eb9324.js"
+  ]
+}
