@@ -1,0 +1,29 @@
+name: CD2
+
+on: workflow_dispatch
+
+jobs:
+    deploy:
+        name: Deploy to Server
+        runs-on: self-hosted
+
+        steps:
+            - name : Pull newest images
+              run: |
+                docker pull ${{secrets.DOCKER_USERNAME}}//Flask:${{github.run_number}}
+
+            - name : Stop and Remove Existing Containers and Networks
+              run: |
+                docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)
+                docker network prune -f
+
+            - name : Create Network and Run Containers
+              run: |
+                docker network create vite
+                docker run -d -p 5000:5000 --network vite --hostname Flask --mount "type=volume,source=pgdata,destination=/var/lib" --name flask -e
+               
+            - name : Remove unused data
+              run: |
+                docker system prune -af
+
+  
